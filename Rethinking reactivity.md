@@ -41,7 +41,7 @@ this.setState({
 ```
 这两者是有一些关键的技术实现的差异（如同我在上面的视频中说到，React并不是响应式的），不过从概念上讲它是一样的。
 
-但是随着[hooks](https://reactjs.org/docs/hooks-intro.html)以一种完全不同的方式处理state的出现，一切都发生了改变。许多框架都开始尝试实现自己的hooks，但是我们很快得出了结论——hooks不是我们追寻的方向。hooks有一些有趣的特性，但是仍然是需要添加一些不自然的代码（unnatural code）和增加了垃圾收集器额外的工作，这对于一个用于嵌入式设备以及重度动画交互的框架并不好。
+但是随着[hooks](https://reactjs.org/docs/hooks-intro.html)以一种完全不同的方式处理state的出现，一切都发生了改变。许多框架都开始尝试实现自己的hooks，但是我们很快得出了结论——hooks不是我们追寻的方向。hooks有一些有趣的特性，但是仍然是需要添加一些不自然的代码（unnatural code）和增加了垃圾收集器额外的工作，这对于（可能会）用于嵌入式设备以及重度动画交互的框架并不好。
 
 因此我们后退一步同时对自己发问——什么样的API对我们是有用的。最终我们意识到最好的API就是完全不使用API（额外的）。我们仅仅使用编程语言本身。更新` count ` 的值以及所有依赖于它的东西应该像下面这么简单：
 
@@ -61,7 +61,7 @@ count += 1; $$invalidate('count', count);
 
 你的组件不是唯一进行整容手术的部分，Svelte本身也有一个崭新的面孔和感觉，感谢 Achim Vedam 令人赞叹的设计工作，他为我们设计了全新的logo和网站，现在网站已经迁移到了[svelte.dev](https://svelte.dev/)。
 
-同事，我们将宣传语从 **'The magical disappearing UI framework'** 更改为 **'Cybernetically enhanced web apps'** 。Svelte有很多优秀的特性——出色的性能表现，更小的打包体积，可访问性，内置样式封装（built-in style encapsulation），声明式转换，易用性，实际上还是个编译器等等——甚至将注意力集中到其中任何一项上都是对其他项的不公平。**'Cybernetically enhanced'**旨在表明Svelte最重要的设计哲学——我们的工具应当作为我们自己的一个智能拓展，希望是一个复古的、William Gibson-esque风格（赛博风格）。
+同时，我们将宣传语从 **'The magical disappearing UI framework'** 更改为 **'Cybernetically enhanced web apps'** 。Svelte有很多优秀的特性——出色的性能表现，更小的打包体积，可访问性，内置样式封装（built-in style encapsulation），声明式转换，易用性，实际上还是个编译器等等——甚至将注意力集中到其中任何一项上都是对其他项的不公平。**'Cybernetically enhanced'** 旨在表明Svelte最重要的设计哲学——我们的工具应当作为我们自己的一个智能拓展，希望是一个复古的、William Gibson-esque风格（赛博风格）。
 
 ### 从 Svelte 2 升级
 
@@ -73,4 +73,4 @@ count += 1; $$invalidate('count', count);
 
 尽管这次发布历尽艰难险阻，但是我们还没有到达终点，我们还有大量的构思去构建更智能、更健壮的代码，以及一份非常长的待实现的特性清单。[Sapper](https://sapper.svelte.dev/)是我们的 Next.js 风格的应用框架，目前仍在使用 Svelte 3 更新的途中。[Svelte Native](https://svelte-native.technology/) 社区项目允许开发者使用 Svelte 构建 Android 和 iOS 应用，正在取得稳定坚实的进展，但是仍需要核心团队的更全面的支持。我们至今还没有其他框架所具备的编辑器拓展，语法高亮，组件库，开发者工具等等，我们需要时间解决这个问题。我们迫切想要增加一流的 TypeScript 支持。
 
-但与此同时，我们认为 Svelte 3 是目前构建Web应用的最佳实践方式。花费一小时浏览我们的[教程](https://www.sveltejs.cn/tutorial/basics)，我们希望能够说明你认同这个说法。无论哪种方式，我们非常乐意在我们的 [Discord chatroom](https://discord.gg/yy75DKs) 或者 [GitHub](https://github.com/sveltejs/svelte)上看到您——欢迎所有人，特别是您！
+但与此同时，我们认为 Svelte 3 是目前构建Web应用的最佳实践方式。花费一小时浏览我们的[教程](https://www.sveltejs.cn/tutorial/basics)，我们希望能够说服你认同这个说法。无论哪种方式，我们非常乐意在我们的 [Discord chatroom](https://discord.gg/yy75DKs) 或者 [GitHub](https://github.com/sveltejs/svelte)上看到您——欢迎所有人，特别是您！
